@@ -1,0 +1,13 @@
+on:
+  push:
+    tags:
+      - '*'
+
+name: Release Builds
+jobs:
+  linux:
+    name: Linux
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo ${{ github.event.release.tag_name }}
