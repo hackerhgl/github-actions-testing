@@ -14,5 +14,6 @@ jobs:
         #   VAR: ${{ github.event }}
         run: |
           echo "dot ${{ toJson(github.event) }}"
+          echo ${GITHUB_REF##*/}
         # echo "nodota `toJson($VAR)`"
         # echo "nodot toJson($VAR)"
