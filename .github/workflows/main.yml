@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: DUMP ENV
-        env:
-          VAR: ${{ github.event }}
+        # env:
+        #   VAR: ${{ github.event }}
         run: |
           echo "dot ${{ toJson(github.event) }}"
-          echo "nodota `toJson($VAR)`"
-          echo "nodot toJson($VAR)"
+        # echo "nodota `toJson($VAR)`"
+        # echo "nodot toJson($VAR)"
