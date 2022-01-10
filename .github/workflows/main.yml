@@ -9,5 +9,9 @@ jobs:
     name: Linux
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "${{ github.event.release }}"
+      - name: DUMP ENV
+        env:
+          VAR: ${{ github.event }}
+        run: |
+          echo "dot ${{ toJson(github.event) }}"
+          echo "nodot ${{ toJson($VAR) }}"
