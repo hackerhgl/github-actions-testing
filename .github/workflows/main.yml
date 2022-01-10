@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo ${{ github.event.release.tag_name }}
+        echo "${{ github.event.release.tag_name }}"
